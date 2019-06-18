@@ -1,5 +1,5 @@
 # Code Style
- 
+
 ## Linting
 
 We make heavy use of [SwiftLint](https://github.com/realm/SwiftLint) to inform our code style decisions. Each project starts out with a copy of our [standardized .swiftlint.yml configuration file](https://gist.github.com/tylermilner/f33e33e3b4f23d8c6b2fdd4f87af98a1), which keeps things pretty close to default, but cranks the warnings up to the max by enabling almost all of the opt-in rules. This helps to ensure a consistent baseline structure of projects across teams.
