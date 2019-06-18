@@ -63,7 +63,7 @@ Also make sure to keep constraint creation and configuration code tucked away in
 
 These should be resolved as soon as they appear in your debugger window. If your layout is causing these kinds of warnings and errors, realize that they may start a cascading effect that will prohibit your app from rendering properly even if everything looks OK at first. Along those same lines, even if everything is working properly today, know that future iOS SDK updates could cause your app to have problems down the road.
 
-The reduction of [run-time console noise](../Warnings%20And%20Errors/Warnings%20And%20Errors.md#console-noise) is also a huge benefit to taking care of these issues before they become real problems. Consider setting up some [project-wide breakpoints](../Warnings%20And%20Errors/Warnings%20And%20Errors.md#project-breakpoints) to help your team identify these errors early.
+The reduction of [run-time console noise](../Build%20Warnings%20and%20Errors/Build%20Warnings%20and%20Errors.md#console-noise) is also a huge benefit to taking care of these issues before they become real problems. Consider setting up some [project-wide breakpoints](../Build%20Warnings%20and%20Errors/Build%20Warnings%20and%20Errors.md#project-breakpoints) to help your team identify these errors early.
 
 ### Named Constraints
 
