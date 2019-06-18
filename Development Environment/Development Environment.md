@@ -16,7 +16,7 @@ We prefer to keep our development environment as close to "stock" as possible. T
 
 ## Gitignore
 
-We make use of [GitHub's Swift gitignore](https://github.com/github/gitignore/blob/master/Swift.gitignore) as the default gitignore for our projects. The only change that we typically make is uncommenting the `Pods/` line so that the [`Pods` folder isn't included in source control](../Dependency%20Management#checking-in-the-pods-folder).
+We make use of [GitHub's Swift gitignore](https://github.com/github/gitignore/blob/master/Swift.gitignore) as the default gitignore for our projects. The only change that we typically make is uncommenting the `Pods/` line so that the [`Pods` folder isn't included in source control](../Dependency%20Management/Dependency%20Management.md#checking-in-the-pods-folder).
 
 ## Cocoapods
 
