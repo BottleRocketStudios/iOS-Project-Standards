@@ -34,7 +34,7 @@ Comments are very important when working on teams, since your solutions may not 
 
 ## Tabs vs Spaces
 
-We [embrace the Xcode defaults](../Development%20Environment/Development%20Environment.md) for just about everything, which means we use **spaces** since the Xcode default is 4 spaces for every "tab".
+We [embrace the Xcode defaults](../Development%20Environment/Development%20Environment.md#embracing-the-defaults) for just about everything, which means we use **spaces** since the Xcode default is 4 spaces for every "tab".
 
 ## Naming
 
