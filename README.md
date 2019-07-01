@@ -20,6 +20,10 @@ See [Architecture.md](./Architecture/Architecture.md).
 
 See [Branching Strategy.md](./Branching%20Strategy/Branching%20Strategy.md).
 
+### Build Warnings and Errors
+
+See [Build Warnings and Errors.md](./Build%20Warnings%20and%20Errors/Build%20Warnings%20and%20Errors.md).
+
 ### Code Review Standards
 
 See [Code Review Standards.md](./Code%20Review%20Standards/Code%20Review%20Standards.md).
@@ -55,7 +59,3 @@ See [Testing.md](./Testing/Testing.md).
 ### Tools and Utilities
 
 See [Tools and Utilities.md](./Tools%20and%20Utilities/Tools%20and%20Utilities.md).
-
-### Warnings and Errors
-
-See [Warnings and Errors.md](./Warnings%20and%20Errors/Warnings%20and%20Errors.md).
