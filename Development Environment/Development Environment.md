@@ -22,7 +22,13 @@ We make use of [GitHub's Swift gitignore](https://github.com/github/gitignore/bl
 
 Many developers naively use the built-in system Ruby to install Cocoapods using the `sudo gem install cocoapods` command. Unfortunately, this can lead to headaches due to the use of `sudo`.
 
-The better way to install Cocoapods is to get off the system Ruby and use a Ruby version manager to negate the need for `sudo` access. [This excellent article](https://medium.com/@jules2689/homebrew-ruby-and-gems-78d6c26b89e) explains how to do this using [`rbenv`](https://github.com/rbenv/rbenv).
+The better way to install Cocoapods is to get off the system Ruby and use a Ruby version manager to negate the need for `sudo` access when installing or executing gems. Follow the instructions in [Ruby Environment Setup](./Ruby%20Environment%20Setup.md) to install and setup [`rbenv`](https://github.com/rbenv/rbenv).
+
+Once your Ruby is properly setup, installing Cocoapods is as simple as:
+
+```bash
+gem install cocoapods
+```
 
 ## Fastlane
 
