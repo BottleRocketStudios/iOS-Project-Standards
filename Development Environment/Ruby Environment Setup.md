@@ -11,7 +11,7 @@ Using some sort of Ruby version management is highly recommended as opposed to u
 ### 1. Install [Homebrew](https://brew.sh) if it's not already installed:
 
 ```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)""
 ```
 
 ### 2. Install `rbenv`:
