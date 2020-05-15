@@ -1,10 +1,14 @@
 # Ruby Environment Setup
 
-How to properly setup your Ruby environment using `rbenv`. Using some sort of Ruby version management is highly recommended as opposed to using the system version of Ruby (which often requires `sudo` access to install dependencies).
+How to properly setup your Ruby environment using `rbenv`.
+
+## Purpose
+
+Using some sort of Ruby version management is highly recommended as opposed to using the system version of Ruby (which often requires `sudo` access to install dependencies).
 
 ## Installing `rbenv`
 
-### 1. Install [Homebrew](https://brew.sh):
+### 1. Install [Homebrew](https://brew.sh) if it's not already installed:
 
 ```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -22,7 +26,7 @@ brew install rbenv
 rbenv init
 ```
 
-**NOTE:** Don't forget to also add `eval "$(rbenv init -)"` to your `~/.bash_profile`, as suggested by the above command.
+**NOTE:** Don't forget to also add `eval "$(rbenv init -)"` to your `~/.bash_profile`, as suggested by the output of the above command.
 
 ### 4. Install a current version of Ruby:
 
