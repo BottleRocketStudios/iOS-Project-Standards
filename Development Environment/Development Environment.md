@@ -46,19 +46,21 @@ bundle install
 
 ## Cocoapods
 
-Once Bundler is properly setup, installing Cocoapods is as simple as adding it to your Gemfile:
+Once Bundler is properly setup, adding Cocoapods as a dependency is as simple as adding it to your Gemfile:
 
 ```
 gem 'cocoapods'
 ```
 
+Then install it by using:
+
+```bash
+bundle install
+```
+
 ## Fastlane
 
 [Fastlane](https://fastlane.tools/) is our main build tool. Again, Bundler should be used so that a `sudo`-less `non`global installation of Fastlane can be achieved.
-
-```
-gem 'fastlane'
-```
 
 ## Build Servers
 
