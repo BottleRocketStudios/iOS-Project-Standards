@@ -58,6 +58,8 @@ Then install it by using:
 bundle install
 ```
 
+For information on managing dependencies, both cocoapods and gems, see [Dependency Management.md](./Dependency%20Management/Dependency%20Management.md).
+
 ## Fastlane
 
 [Fastlane](https://fastlane.tools/) is our main build tool. Again, Bundler should be used so that a `sudo`-less `non`global installation of Fastlane can be achieved.
