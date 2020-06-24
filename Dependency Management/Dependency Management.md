@@ -10,7 +10,7 @@ Software built with many dependencies starts to feel a bit like "software engine
 
 ### Understanding `bundle` Commands
 
-Knowing when to use `bundle install` vs `bundle update`, or even what the differences between the commands are can be tricky. In summary:
+Knowing when to use `bundle install` vs `bundle update`, or even what the differences between the commands are, can be tricky. In summary:
 
 * `bundle install`
     * Fetches and installs the dependencies listed in the `Gemfile` according to the versions listed in the `Gemfile.lock`. This is the first command you'll use to install dependencies when you initially check out a repository as well as when you add or remove dependencies from the `Gemfile`.
@@ -59,8 +59,8 @@ In order to keep repository size as minimal as possible, most of our apps do not
 ### Understanding `pod` Commands
 
 Assuming you are using Bundler and have not installed Cocoapods globally all of these commands are used. If you **have** install Cocoapods globally simply use `pod <command>` instead of `bundle exec pod <command>`.
-	
-Knowing when to use `bundle exec pod install` vs `bundle exec pod update`, or even what the differences between the commands are can be tricky. In summary:
+
+Knowing when to use `bundle exec pod install` vs `bundle exec pod update`, or even what the differences between the commands are, can be tricky. In summary:
 
 * `bundle exec pod install`
     * Fetches and installs the dependencies listed in the `Podfile` according to the versions listed in the `Podfile.lock`. This is the main command you'll use to install dependencies when you initially check out a repository as well as when you add or remove dependencies from the `Podfile`.
