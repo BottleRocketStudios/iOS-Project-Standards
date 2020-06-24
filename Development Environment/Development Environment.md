@@ -44,6 +44,8 @@ To install all the gems in your Gemfile simply use the command:
 bundle install
 ```
 
+For information on managing dependencies, both cocoapods and gems, see [Dependency Management.md](./Dependency%20Management/Dependency%20Management.md).
+
 ## Cocoapods
 
 Once Bundler is properly setup, adding Cocoapods as a dependency is as simple as adding it to your Gemfile:
