@@ -36,7 +36,7 @@ For classes that are shared across multiple screens, a top-level `Shared` folder
 
 In general, leave the files that Xcode generates with new project creation where they are. This can be helpful for the following reasons:
 
-* Keeps the `AppDelegate`, `SceneDelegate`, and `App` at the top-level
+* Keeps the `AppDelegate`, `SceneDelegate`, and `App` (SwiftUI) at the top-level
     * As the entry point for your application, it's nice to be able to quickly dive in without having to expand a lot of folders.
 * Keeps the `Assets.xcassets` (Asset Catalog) at the top-level
     * This makes it easy to get to your image resources from anywhere.
