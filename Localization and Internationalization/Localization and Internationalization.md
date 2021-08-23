@@ -11,63 +11,65 @@ You must first internationalize your app before you can take advantage of locali
 
 ## Localized Strings
 
-### Use `NSLocalizedString` for all user-facing copy
+### Use `NSLocalizedString` or `String(localized:)` (iOS 15+) for all user-facing copy
 
-Using the [`NSLocalizedString()` macro](https://developer.apple.com/documentation/foundation/nslocalizedstring) from the start of a project will ensure that supporting additional languages can be done in the future with minimal effort.
+Using [`NSLocalizedString()`](https://developer.apple.com/documentation/foundation/nslocalizedstring) or [`String(localized:)`](https://developer.apple.com/documentation/swift/string/3867985-init?changes=latest_minor) from the start of a project will ensure that supporting additional languages can be done in the future with minimal effort.
 
-### Use quality comments when invoking `NSLocalizedString()`
+### Use quality comments when invoking `NSLocalizedString()` of `String(localized:)`
 
-The `comment` parameter of `NSLocalizedString()` is used by translators when you add additional languages to your app. Adding some context here can make the job of the translators easier and help the overall quality of the translations. You should describe where the string is used and what its purpose is rather than simply echoing the string itself.
+The `comment` parameter of `NSLocalizedString()` or `String(localized:)` is used by translators when you add additional languages to your app. Adding some context here can make the job of the translators easier and help the overall quality of the translations. You should describe the interface element, the context, and what each variable is. Simply echoing the string itself is not recommended. The translator may not have access to the UI so it is important to provide good comments.
 
 #### Do
 
 ```swift
-NSLocalizedString("Back", comment: "Title for generic back buttons used throughout the app.")
+NSLocalizedString("Order", comment: "Button: confirms purchase of a book")
+String(localized: "Orders", comment: "Title: a list of current book orders")
 ```
 
 #### Do Not
 
 ```swift
-NSLocalizedString("Back", comment: "Back")
+NSLocalizedString("Order", comment: "Order")
+String(localized: "Orders", comment: "Orders")
 ```
 
 ### Avoid manually editing `.strings` files
 
 Once you import translations into your app, Xcode will automatically generate a `Localizable.strings` file for the various languages you support. Avoid editing this file by hand since your edits might get blown away the next time you go through the localization export/import process.
 
-### Consolidate all user-facing copy into a single struct/file
+### Consolidate all user-facing copy into a single enum/file
 
-Consolidating all user-facing copy into a `LocalizedStrings` struct (inside of a `LocalizedStrings.swift` file) makes it easier to change and audit user-facing copy.
+Consolidating all user-facing copy into a `LocalizedStrings` enum (inside of a `LocalizedStrings.swift` file) makes it easier to change and audit user-facing copy.
 
 #### Example `LocalizedStrings.swift`
 
 ```swift
-struct LocalizedStrings {
+enum LocalizedStrings {
 
     // MARK: - General
 
-    struct General {
-        static let back = NSLocalizedString("Back", comment: "Title for generic back buttons used throughout the app.")
-        static let next = NSLocalizedString("Next", comment: "Title for generic next buttons used throughout the app.")
+    enum General {
+        static let back = NSLocalizedString("Back", comment: "Button: generic back button used throughout the app.")
+        static let next = NSLocalizedString("Next", comment: "Button: generic next button used throughout the app.")
         // ...
     }
 
     // MARK: - Account
 
-    struct Account {
+    enum Account {
         // ...
     }
 
     // MARK: - Home
 
-    struct Home {
-        static let welcome = NSLocalizedString("Welcome, %@", comment: "Home screen welcome message. Translations should preserve the '%@' characters.")
+    enum Home {
+        static let welcome = NSLocalizedString("Welcome, %@", comment: "Message: home screen welcome. Translations should preserve the '%@' characters.")
         // ...
     }
 
     // MARK: - Login
 
-    struct Login {
+    enum Login {
         // ...
     }
 }
@@ -94,7 +96,7 @@ Not all languages handle pluralization of words in the same way. **Do not** hard
 #### Do
 
 ```swift
-return NSLocalizedString("Purchased %d days ago", comment: "Purchase made '%d' days ago.")
+return NSLocalizedString("Purchased %d days ago", comment: "Message: describes when items were purchased")
 ```
 
 With corresponding `Localizable.stringsdict`:
@@ -112,6 +114,10 @@ if daysSincePurchase < 1 {
     return NSLocalizedString("Purchased %d days ago", comment: "Purchase made '%d' days ago.")
 }
 ```
+
+## Localized Resources
+
+Asset catalogs are great to organize and manage different types of assets. There are several asset types that support localization. They include: color sets, image sets, symbol sets, watch complications, Apple TV image stacks, and Sprite Atlases. In the asset catalog, click the asset you want to localize. Next, click Localize in the Attributes inspector and select the localizations you want to add. Other resources not supported by asset catalogs can be localized by selecting them in the Project navigator and clicking Localize in the inspector.
 
 ## Respect the device's locale
 
@@ -141,4 +147,4 @@ During development, you can modify your app's scheme to get a sense for how your
 
 ## Additional Resources
 
-As always, [Apple's internationalization guide](https://developer.apple.com/internationalization/) is a good hub for learning more about internationalization and localization.
+As always, [Apple's Localization guide](https://developer.apple.com/localization/) is a good hub for learning more about internationalization and localization.
